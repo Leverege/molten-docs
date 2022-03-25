@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "dev-amplify-docs",
+    "site": "dev-molten-docs",
     "public": "site",
     "ignore": [
       "firebase.json",
