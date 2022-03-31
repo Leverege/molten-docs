@@ -1657,20 +1657,12 @@
             
           
         
-          
-            
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../config/">Configuration</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -1681,20 +1673,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../api/" class="md-nav__link">
-        API
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -1757,7 +1735,7 @@
                 
 
 <h1 id="routes">Routes<a class="headerlink" href="#routes" title="Permanent link">&para;</a></h1>
-<p>The Routes defines what to render, where. The what is a React component, and the where is a URL. The route is a directive to tell Molten to render a particular React component at a mathcing url pattern when certain criteria are met. The criteria is captured in the <code>matches</code> object defined by the plugin, and follows the rules of the Plugin Matches system.</p>
+<p>The Routes defines what to render, where. The what is a React component, and the where is a URL. The route is a directive to tell Molten to render a particular React component at a matching url pattern when certain criteria are met. The criteria is captured in the <code>matches</code> object defined by the plugin, and follows the rules of the Plugin Matches system.</p>
 <p>To define a Route, add a <code>Route</code> Plugin that has the following properties:</p>
 <table>
 <thead>
@@ -1776,7 +1754,7 @@
 <tr>
 <td>exact</td>
 <td>boolean</td>
-<td>If <code>true</code>, the URL must match exactly the path. This should be true in the case of a leaf screen, <code>false</code> in the case where the screen manages deeper parts of the url. For example, our <code>/Group/5</code> screen above would set this to <code>false</code> and then render its own <code>Switch</code> Component useing the <code>Routes</code> object.</td>
+<td>If <code>true</code>, the URL must match exactly the path. This should be true in the case of a leaf screen, <code>false</code> in the case where the screen manages deeper parts of the url. For example, our <code>/Group/5</code> screen above would set this to <code>false</code> and then render its own <code>Switch</code> Component using the <code>Routes</code> object.</td>
 </tr>
 <tr>
 <td>path</td>
@@ -1801,7 +1779,7 @@
 <tr>
 <td>props</td>
 <td>Object or null</td>
-<td>Extra props to send into the component. These can be overriden by extra props sent into the <code>getRoutesFor</code> function</td>
+<td>Extra props to send into the component. These can be overridden by extra props sent into the <code>getRoutesFor</code> function</td>
 </tr>
 <tr>
 <td>strict</td>

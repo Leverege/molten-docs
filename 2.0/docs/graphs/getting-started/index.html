@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#example" class="md-skip">
           Skip to content
         </a>
       
@@ -1175,22 +1175,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     Example
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1659,20 +1646,12 @@
             
           
         
-          
-            
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../config/">Configuration</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -1683,20 +1662,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../api/" class="md-nav__link">
-        API
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -1730,22 +1695,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     Example
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1764,11 +1716,10 @@
 
   <h1>Getting Started</h1>
 
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>First, install the ui-attributes-graphs library:
 <div class="highlight"><pre><span></span><code>npm i @leverege/ui-attributes-graphs
 </code></pre></div></p>
-<p>Next, define UI Attributes for the data that you are hoping to graph. For instance, the below example defines three attributes for a fictious 'test.history' data type. If you are using Molten, you may already have a number of UI Attributes defined for you based on your Imagine project's blueprints:
+<p>Next, define UI Attributes for the data that you are hoping to graph. For instance, the below example defines three attributes for a fictitious 'test.history' data type. If you are using Molten, you may already have a number of UI Attributes defined for you based on your Imagine project's blueprints:
 <div class="highlight"><pre><span></span><code><span class="nx">Plugins</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span> <span class="s1">&#39;Attribute&#39;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
   <span class="nx">displayName</span> <span class="o">:</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span>
@@ -1817,7 +1768,7 @@
 <span class="p">}</span> <span class="p">)</span>
 </code></pre></div></p>
 <p>In this case, time and temperature will be the two data points that we will be graphing against one another. Name is (in this case) a unique identifier for the objects that these data represent and will be used to key the data into series to facilitate graphing.</p>
-<p>Using the <code>useSeriesData</code> hook or the <code>withSeriesData</code> HOC exported by this library, prepare your data for graphing. The hook/HOC expect to be passed an array of data that you want to be graphed, an attribute name that will be used to chunk that data, and an options object with possible properties of obejctType and sortAttribute. The hook/HOC will tarnsform and memoize this data into an object keyed on the values of the chunk attribute that you have passed. If you pass an objectType in the options, it will be used to help disambiguate the chunk and sort attributes rather than using the first attribute registered with that particular name. If you pass a sortAttribute in the options, it will be used to sort the data in your series.</p>
+<p>Using the <code>useSeriesData</code> hook or the <code>withSeriesData</code> HOC exported by this library, prepare your data for graphing. The hook/HOC expect to be passed an array of data that you want to be graphed, an attribute name that will be used to chunk that data, and an options object with possible properties of obejctType and sortAttribute. The hook/HOC will transform and memoize this data into an object keyed on the values of the chunk attribute that you have passed. If you pass an objectType in the options, it will be used to help disambiguate the chunk and sort attributes rather than using the first attribute registered with that particular name. If you pass a sortAttribute in the options, it will be used to sort the data in your series.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code>const dataArray = [
   {

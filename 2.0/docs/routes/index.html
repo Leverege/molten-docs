@@ -1609,20 +1609,12 @@
             
           
         
-          
-            
-          
-        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../config/">Configuration</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
           
         </div>
       
@@ -1633,20 +1625,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/" class="md-nav__link">
-        API
-      </a>
-    </li>
-  
-
             
           
         </ul>
@@ -1687,7 +1665,7 @@
                 
 
 <h1 id="adding-a-screen">Adding a Screen<a class="headerlink" href="#adding-a-screen" title="Permanent link">&para;</a></h1>
-<p>Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the <a href="./screens">Screen</a> component, registering a <a href="./routes">Route</a> to a URL, and making a <a href="./link">Link</a> to take the user to the URL.</p>
+<p>Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the <a href="./screens">Screen</a> component, registering a <a href="./routes">Route</a> to a URL, and making a <a href="./links">Link</a> to take the user to the URL.</p>
 <p>Molten uses React Router and Plugins define which screens are presented at a particular URL. The screen presented at a URL may actually be composed of several subscreens, depending on how the Routes are specific. For example, a URL of <code>/Group/5/Children</code> may actually present a screen for <code>Group/5</code>, which has some links, widgets, information, etc, but also has a Dynamic Route mechanism it it that would also present the <code>Children</code> screen.</p>
 <p>Route Plugins are evaluated and installed when the <code>getRoutesFor()</code> call is invoked. This can occur in multiple screens in your application. The <code>DesktopMainScreen</code>, for example calls:</p>
 <div class="highlight"><pre><span></span><code>  &lt;Switch&gt;
