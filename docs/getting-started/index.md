@@ -2,7 +2,7 @@
 
 ## Overview
 
-Molten is a React-based plugin framework for rapid UI development. Simply write and register a plugin and Molten will make it available throughout your application exactly where you need it--without requiring changes to existing code.
+The primary component of Leverege Build is Molten. Molten is a React-based plugin framework for rapid UI development. Simply write and register a plugin and Molten will make it available throughout your application exactly where you need it--without requiring changes to existing code.
 
 At its core, Molten is a plugin registry with update and access mechanisms. It also includes an extensive suite of pre-built plugins that solve common data patterns and visualizations. Molten's default plugins are designed to make it easy to build powerful IoT applications using the Leverege Stack, but Molten can be used on its own to make your codebase more modular, dynamic, and flexible.
 
