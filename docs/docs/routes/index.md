@@ -1,6 +1,6 @@
 # Adding a Screen
 
-Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the [Screen](/docs/routes/screens/) component, registering a [Route](/docs/routes/routes/) to a URL, and making a [Link](/docs/routes/link/) to take the user to the URL.
+Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the [Screen](./screens) component, registering a [Route](./routes) to a URL, and making a [Link](./link) to take the user to the URL.
 
 Molten uses React Router and Plugins define which screens are presented at a particular URL. The screen presented at a URL may actually be composed of several subscreens, depending on how the Routes are specific. For example, a URL of `/Group/5/Children` may actually present a screen for `Group/5`, which has some links, widgets, information, etc, but also has a Dynamic Route mechanism it it that would also present the `Children` screen.
 
