@@ -9,7 +9,7 @@ At its core, Molten is a plugin registry with update and access mechanisms. It a
 Molten gives you the ability register new plugins--code to be accessed elsewhere in the app--and to add new plugin points that call your custom code. This means you have maximum control over the data and displays driving your app. Add a button that appears on select toolbars. Call a function that conditionally colors icons based on external data. Query an API and render items on a table and a map. You can use Molten to make small changes to an existing app, or as a starting point for a totally custom product.
 
 !!! tip Learn more
-    To learn more about Molten's key concepts before jumping in, see the [Concepts](./concepts/plugins) section for an overview of plugins, models, and attributes.
+    To learn more about Molten's key concepts before jumping in, see the Concepts section for an overview of plugins, models, and attributes.
 
 ## Using Molten with Leverege's IoT Stack
 
