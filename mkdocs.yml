@@ -17,7 +17,7 @@ nav :
   - Home: index.md
   - Getting Started:
       - Installation: getting-started/index.md
-      - Localization: getting-started/i18n.md
+     #### - Localization: getting-started/i18n.md
   - Concepts: 
     - Plugins: 
       - concepts/plugins/index.md
@@ -32,18 +32,18 @@ nav :
       - Editors: concepts/models/editors.md
     - Attributes:
       - concepts/attributes/index.md
-      - Formatters: concepts/attributes/formatters.md
-      - Relationships: concepts/attributes/relationships.md
-      - Data Sources: concepts/attributes/data-sources.md
-      - Details: concepts/attributes/details.md
-      - Table Columns: concepts/attributes/table.md
-    - Actions: concepts/actions.md
+      #### - Formatters: concepts/attributes/formatters.md
+      #### - Relationships: concepts/attributes/relationships.md
+      ####  - Data Sources: concepts/attributes/data-sources.md
+      #### - Details: concepts/attributes/details.md
+      #### - Table Columns: concepts/attributes/table.md
+    #### - Actions: concepts/actions.md
   - Documentation: 
     - Startup: 
       - docs/startup/index.md
       - Initializers: docs/startup/initializers.md
       - Support Components: docs/startup/support-components.md
-      - Redux: docs/startup/redux.md
+      #### - Redux: docs/startup/redux.md
     - Adding a Screen:
       - docs/routes/index.md
       - Screens : docs/routes/screens.md
@@ -84,11 +84,11 @@ nav :
         - AttributeCellRenderer: docs/table/plugin-points/attribute-cell-renderer.md
         - ColumnRenderer: docs/table/plugin-points/column-renderer.md
         - TableModelConfigurer: docs/table/plugin-points/model-configurer.md
-  - Plugins:
+  #### - Plugins:
     - plugins/index.md
   - Configuration:
     - config/index.md
-  - API:
+  #### - API:
     - api/index.md
 extra:
   version: 
