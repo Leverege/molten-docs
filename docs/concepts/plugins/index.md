@@ -34,7 +34,7 @@ Plugins.add( 'myProject.Initializer', MyInitializer )
 
 This `Plugins.add()` or `molten.addPlugin()` registers the plugin for use at the specified plugins point. Adding a plugin can be as simple as this. 
 
-Some plugin points are a little more complicated. These plugin points will often use [match objects](./refinement), type values, and methods to help determine whether or not a particular plugin should be used in a particular instance. Some will define sort values (like [Molten's initializer plugins](/docs/startup/initializers/)) to help aid in ordered invokation. Some are meant to be used in [Factory]((./factories)) lookup mechanism or participate in active [Views]((./views)). These extra mechanisms need to be defined by the plugin points interface documentation so developers can understand how to leverage the particular plugin point. 
+Some plugin points are a little more complicated. These plugin points will often use [match objects](./refinement), type values, and methods to help determine whether or not a particular plugin should be used in a particular instance. Some will define sort values to help aid in ordered invokation. Some are meant to be used in [Factory](./factories) lookup mechanism or participate in active [Views](./views). These extra mechanisms need to be defined by the plugin points interface documentation so developers can understand how to leverage the particular plugin point. 
 
 
 ## Observable

@@ -63,6 +63,7 @@ nav :
       - docs/data-viewers/index.md
     - Graphs :
       - docs/graphs/index.md
+      - Getting Started : docs/graphs/getting-started.md
       - XYChart:
         - docs/graphs/xychart/index.md
         - Plugin Points:
