@@ -1,18 +1,18 @@
 # Routes
 
-The Routes defines what to render, where. The what is a React component, and the where is a URL. The route is a directive to tell Molten to render a particular React component at a mathcing url pattern when certain criteria are met. The criteria is captured in the `matches` object defined by the plugin, and follows the rules of the Plugin Matches system.
+The Routes defines what to render, where. The what is a React component, and the where is a URL. The route is a directive to tell Molten to render a particular React component at a matching url pattern when certain criteria are met. The criteria is captured in the `matches` object defined by the plugin, and follows the rules of the Plugin Matches system.
 
 To define a Route, add a `Route` Plugin that has the following properties:
 
 | Field | Type | Description |
 |-------|------|-------------|
 | id | String | The unique plugin id |
-| exact | boolean | If `true`, the URL must match exactly the path. This should be true in the case of a leaf screen, `false` in the case where the screen manages deeper parts of the url. For example, our `/Group/5` screen above would set this to `false` and then render its own `Switch` Component useing the `Routes` object. |
+| exact | boolean | If `true`, the URL must match exactly the path. This should be true in the case of a leaf screen, `false` in the case where the screen manages deeper parts of the url. For example, our `/Group/5` screen above would set this to `false` and then render its own `Switch` Component using the `Routes` object. |
 | path | String or Array<String>| The path expression used to match eg. `/group/:groupId` |
 | matches | Object | An object specifying where the the route should appear. Normally, the `client` is specified |
 | component | ReactComponent or Function | The component to render |
 | render | function | Optional React function to render |
-| props | Object or null | Extra props to send into the component. These can be overriden by extra props sent into the `getRoutesFor` function |
+| props | Object or null | Extra props to send into the component. These can be overridden by extra props sent into the `getRoutesFor` function |
 | strict | boolean | If true, the path will compare trailing slashes | default | boolean | Specifies that the route should be used as the default redirect |
 
 ## Example

@@ -90,7 +90,7 @@ nav :
   - Configuration:
     - config/index.md
   #### - API:
-    - api/index.md
+   #### - api/index.md
 extra:
   version: 
     provider: mike

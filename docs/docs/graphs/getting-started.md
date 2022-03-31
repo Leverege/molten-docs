@@ -1,10 +1,9 @@
-## Getting Started
 First, install the ui-attributes-graphs library:
 ```
 npm i @leverege/ui-attributes-graphs
 ```
 
-Next, define UI Attributes for the data that you are hoping to graph. For instance, the below example defines three attributes for a fictious 'test.history' data type. If you are using Molten, you may already have a number of UI Attributes defined for you based on your Imagine project's blueprints:
+Next, define UI Attributes for the data that you are hoping to graph. For instance, the below example defines three attributes for a fictitious 'test.history' data type. If you are using Molten, you may already have a number of UI Attributes defined for you based on your Imagine project's blueprints:
 ``` javascript
 Plugins.add( 'Attribute', {
   name : 'name',
@@ -56,7 +55,7 @@ Plugins.add( 'Attribute', {
 
 In this case, time and temperature will be the two data points that we will be graphing against one another. Name is (in this case) a unique identifier for the objects that these data represent and will be used to key the data into series to facilitate graphing.
 
-Using the `useSeriesData` hook or the `withSeriesData` HOC exported by this library, prepare your data for graphing. The hook/HOC expect to be passed an array of data that you want to be graphed, an attribute name that will be used to chunk that data, and an options object with possible properties of obejctType and sortAttribute. The hook/HOC will tarnsform and memoize this data into an object keyed on the values of the chunk attribute that you have passed. If you pass an objectType in the options, it will be used to help disambiguate the chunk and sort attributes rather than using the first attribute registered with that particular name. If you pass a sortAttribute in the options, it will be used to sort the data in your series.
+Using the `useSeriesData` hook or the `withSeriesData` HOC exported by this library, prepare your data for graphing. The hook/HOC expect to be passed an array of data that you want to be graphed, an attribute name that will be used to chunk that data, and an options object with possible properties of obejctType and sortAttribute. The hook/HOC will transform and memoize this data into an object keyed on the values of the chunk attribute that you have passed. If you pass an objectType in the options, it will be used to help disambiguate the chunk and sort attributes rather than using the first attribute registered with that particular name. If you pass a sortAttribute in the options, it will be used to sort the data in your series.
 ### Example
 ```
 const dataArray = [

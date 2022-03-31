@@ -1,4 +1,4 @@
-The second step of consuming custom data in your molten application is creating a DataSource. More general DataSource documentation can be found [here](docs/data-sources)
+The second step of consuming custom data in your molten application is creating a DataSource. More general DataSource documentation can be found [here](./docs/data-sources)
 
 For our use case, of creating a list of pets, the DataSource might look like this:
 

@@ -29,7 +29,7 @@ To got to our new Route and Screen using the toolbars, we can use the `LinkActio
         path : '/iscreen'
       } )
     ```
-    In this case, we are going to put the link to `/iscreen` into the Main Screen's user profile toolbar (targeted by using `use : "userBar"`) with the name "Incredible" and a snowfake icon.
+    In this case, we are going to put the link to `/iscreen` into the Main Screen's user profile toolbar (targeted by using `use : "userBar"`) with the name "Incredible" and a snowflake icon.
 === "Setup"
     Be sure to install your plugin in your **PluginSetup.js** file.
     ``` javascript
