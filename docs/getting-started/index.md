@@ -9,13 +9,13 @@ At its core, Molten is a plugin registry with update and access mechanisms. It a
 Molten gives you the ability register new plugins--code to be accessed elsewhere in the app--and to add new plugin points that call your custom code. This means you have maximum control over the data and displays driving your app. Add a button that appears on select toolbars. Call a function that conditionally colors icons based on external data. Query an API and render items on a table and a map. You can use Molten to make small changes to an existing app, or as a starting point for a totally custom product.
 
 !!! tip Learn more
-    To learn more about Molten's key concepts before jumping in, see the [Concepts](../concepts/plugins.md) section for an overview of plugins, models, and attributes.
+    To learn more about Molten's key concepts before jumping in, see the [Concepts](./concepts/plugins.md) section for an overview of plugins, models, and attributes.
 
 ## Using Molten with Leverege's IoT Stack
 
 [Leverege's IoT Stack](https://www.leverege.com/iot-stack/overview) provides a powerful, flexible system for working with internet connected devices, and the businesses built around them. Molten's default settings and plugins make working with your Leverege project simple.
 
-It handles user authentication and dynamically creates routes and views based on your Imagine project configuration. Molten uses Leverege's Builder tool for advanced themeing allowing you to dial in the look and feel of your app. You can learn more about configuring your Imagine project in the tutorials on the [Leverege Admin Configuration Academy](https://stack-docs.leverege.com/4.0.0/config/).
+It handles user authentication and dynamically creates routes and views based on your Imagine project configuration. Molten uses Leverege's Builder tool for advanced themeing allowing you to dial in the look and feel of your app. You can learn more about configuring your Imagine project in the tutorials on the [Leverege User Configuration](https://stack-docs.leverege.com/4.0.0/config/).
 
 To get started:
 
