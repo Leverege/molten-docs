@@ -1115,6 +1115,8 @@
         
           
         
+          
+        
       
       
         
@@ -1142,11 +1144,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../docs/graphs/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3" type="checkbox" id="__nav_4_6_3" >
       
       
       
@@ -1166,14 +1182,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../docs/graphs/xychart/">XYChart</a>
           
-            <label for="__nav_4_6_2">
+            <label for="__nav_4_6_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="XYChart" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_6_2">
+        <label class="md-nav__title" for="__nav_4_6_3">
           <span class="md-nav__icon md-icon"></span>
           XYChart
         </label>
@@ -1190,7 +1206,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2_2" type="checkbox" id="__nav_4_6_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3_2" type="checkbox" id="__nav_4_6_3_2" >
       
       
       
@@ -1209,13 +1225,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_6_2_2">
+        <label class="md-nav__link" for="__nav_4_6_3_2">
           Plugin Points
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Plugin Points" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_6_2_2">
+        <label class="md-nav__title" for="__nav_4_6_3_2">
           <span class="md-nav__icon md-icon"></span>
           Plugin Points
         </label>
@@ -1244,7 +1260,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2_2_2" type="checkbox" id="__nav_4_6_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3_2_2" type="checkbox" id="__nav_4_6_3_2_2" >
       
       
       
@@ -1264,14 +1280,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../docs/graphs/plugin-points/glyphs/">Glyphs</a>
           
-            <label for="__nav_4_6_2_2_2">
+            <label for="__nav_4_6_3_2_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Glyphs" data-md-level="5">
-        <label class="md-nav__title" for="__nav_4_6_2_2_2">
+        <label class="md-nav__title" for="__nav_4_6_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           Glyphs
         </label>
@@ -1718,7 +1734,7 @@
 <span class="nx">Plugins</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span> <span class="s1">&#39;myProject.Initializer&#39;</span><span class="p">,</span> <span class="nx">MyInitializer</span> <span class="p">)</span>
 </code></pre></div>
 <p>This <code>Plugins.add()</code> or <code>molten.addPlugin()</code> registers the plugin for use at the specified plugins point. Adding a plugin can be as simple as this. </p>
-<p>Some plugin points are a little more complicated. These plugin points will often use <a href="./refinement">match objects</a>, type values, and methods to help determine whether or not a particular plugin should be used in a particular instance. Some will define sort values (like <a href="/docs/startup/initializers/">Molten's initializer plugins</a>) to help aid in ordered invokation. Some are meant to be used in <a href="(./factories)">Factory</a> lookup mechanism or participate in active <a href="(./views)">Views</a>. These extra mechanisms need to be defined by the plugin points interface documentation so developers can understand how to leverage the particular plugin point. </p>
+<p>Some plugin points are a little more complicated. These plugin points will often use <a href="./refinement">match objects</a>, type values, and methods to help determine whether or not a particular plugin should be used in a particular instance. Some will define sort values to help aid in ordered invokation. Some are meant to be used in <a href="./factories">Factory</a> lookup mechanism or participate in active <a href="./views">Views</a>. These extra mechanisms need to be defined by the plugin points interface documentation so developers can understand how to leverage the particular plugin point. </p>
 <h2 id="observable">Observable<a class="headerlink" href="#observable" title="Permanent link">&para;</a></h2>
 <p>The Plugins mechanism is also observable, meaning that listeners can be registered to detect when plugins are added or removed. This can help plugin endpoints respond to new plugins or avoid ordering issues cause by importation/registration order. It can also help to support dynamic loading of code. </p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Add a listener to all types</span>

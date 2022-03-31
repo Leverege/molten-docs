@@ -1115,6 +1115,8 @@
         
           
         
+          
+        
       
       
         
@@ -1142,11 +1144,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../graphs/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3" type="checkbox" id="__nav_4_6_3" >
       
       
       
@@ -1166,14 +1182,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../graphs/xychart/">XYChart</a>
           
-            <label for="__nav_4_6_2">
+            <label for="__nav_4_6_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="XYChart" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_6_2">
+        <label class="md-nav__title" for="__nav_4_6_3">
           <span class="md-nav__icon md-icon"></span>
           XYChart
         </label>
@@ -1190,7 +1206,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2_2" type="checkbox" id="__nav_4_6_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3_2" type="checkbox" id="__nav_4_6_3_2" >
       
       
       
@@ -1209,13 +1225,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_4_6_2_2">
+        <label class="md-nav__link" for="__nav_4_6_3_2">
           Plugin Points
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Plugin Points" data-md-level="4">
-        <label class="md-nav__title" for="__nav_4_6_2_2">
+        <label class="md-nav__title" for="__nav_4_6_3_2">
           <span class="md-nav__icon md-icon"></span>
           Plugin Points
         </label>
@@ -1244,7 +1260,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_2_2_2" type="checkbox" id="__nav_4_6_2_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_3_2_2" type="checkbox" id="__nav_4_6_3_2_2" >
       
       
       
@@ -1264,14 +1280,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../graphs/plugin-points/glyphs/">Glyphs</a>
           
-            <label for="__nav_4_6_2_2_2">
+            <label for="__nav_4_6_3_2_2">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Glyphs" data-md-level="5">
-        <label class="md-nav__title" for="__nav_4_6_2_2_2">
+        <label class="md-nav__title" for="__nav_4_6_3_2_2">
           <span class="md-nav__icon md-icon"></span>
           Glyphs
         </label>
@@ -1671,7 +1687,7 @@
                 
 
 <h1 id="adding-a-screen">Adding a Screen<a class="headerlink" href="#adding-a-screen" title="Permanent link">&para;</a></h1>
-<p>Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the <a href="/docs/routes/screens/">Screen</a> component, registering a <a href="/docs/routes/routes/">Route</a> to a URL, and making a <a href="/docs/routes/link/">Link</a> to take the user to the URL.</p>
+<p>Molten will by default, analyze your Imagine project's Blueprints and create Screens and Routes to the screens based off of their hierarchies. Custom Screens can be added, however. There are normally three parts to this process: creation of the <a href="./screens">Screen</a> component, registering a <a href="./routes">Route</a> to a URL, and making a <a href="./link">Link</a> to take the user to the URL.</p>
 <p>Molten uses React Router and Plugins define which screens are presented at a particular URL. The screen presented at a URL may actually be composed of several subscreens, depending on how the Routes are specific. For example, a URL of <code>/Group/5/Children</code> may actually present a screen for <code>Group/5</code>, which has some links, widgets, information, etc, but also has a Dynamic Route mechanism it it that would also present the <code>Children</code> screen.</p>
 <p>Route Plugins are evaluated and installed when the <code>getRoutesFor()</code> call is invoked. This can occur in multiple screens in your application. The <code>DesktopMainScreen</code>, for example calls:</p>
 <div class="highlight"><pre><span></span><code>  &lt;Switch&gt;
