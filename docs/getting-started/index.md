@@ -20,7 +20,6 @@ It handles user authentication and dynamically creates routes and views based on
 To get started:
 
 * Install Molten: `npm i @leverege/molten`
-* Export your Builder theme [link-to-instructions-here] (for our example, we'll export it to './Theme')
 * Molten uses Mapbox for geographic utilities (map displays, geocoding). You will need to add a Mapbox API key to your `.env`
 
   ```shell
