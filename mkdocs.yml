@@ -61,6 +61,17 @@ nav :
       - docs/data-sources/index.md
     - Data Viewers:
       - docs/data-viewers/index.md
+    - Filtering and Sorting:
+      - docs/filtering/index.md
+      - Filtering:
+        - docs/filtering/filter/index.md
+        - Imagine Filtering: docs/filtering/filter/imagine.md
+        - Attribute Conditions: docs/filtering/filter/attribute-conditions.md
+        - Custom Filters: docs/filtering/filter/custom-comparators.md
+        - Custom Suggestors: docs/filtering/filter/custom-suggestors.md
+        - Custom Data: docs/filtering/filter/custom-data.md
+      - Sorting:
+        - docs/filtering/sort/index.md
     - Graphs :
       - docs/graphs/index.md
       - Getting Started : docs/graphs/getting-started.md
