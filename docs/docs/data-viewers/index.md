@@ -1,109 +1,127 @@
 # Data Viewers
 
-!!! Danger Update
-    This is outdated
+Data Viewers are widgets that are used to display viewers and editors about a certain data set. The root controller will load the base data and supply it to the data viewers as props. The root controller will manage the layout and its models, which allows data viewers to be added and removed in particular locations. The root Layout consists of two main sections and four surrounding auxilary sections ( top, bottom, left, right ). These sections are fixed to the screen current screen size, meaning that they do now scroll off the screen: the top is fixed to the top of the area, the bottom to the bottom, left and right to the sides, and the remaining section is divided amongst the two main sections. Any one of these sections can be null, and its space is given to the other data viewers. A special DashboardDataViewer that support Cards allows these sections to be further divided and scrolled.
 
-Data Viewers are widgets that are mean to display pieces of information about a common set of data. Usually, this common data is either a list of items (via `GroupScreen`) or a single item (via `ItemInfoScreen`). The top level controller that manages dataViewers will load the data as needed, but the DataViewers can have some control to effect which data is loaded. In the `GroupScreen` usage, data viewers are given a filters object by which they can contribute filters.
+DataViewers are made available for use via the Plugins mechanism under the key `DataViewer`. DataViewer plugins will act handle to the various parts of the DataViewer: the name/usage, the DataViewer's settings model, and the React component used to display the data to the user. The DataViewer's interface looks like this:
 
-## Location
 
-DataViewers are presented in a Layout. The root Layout consists of two main sections and four surrounding auxilary sections ( top, bottom, left, right ). These sections are fixed to the screen current screen size, meaning that they do now scroll off the screen: the top is fixed to the top of the area, the bottom to the bottom, left and right to the sides, and the remaining section is divided amoungst the two main sections. Any one of these sections can be null, in which case their space is given to the appropriate section. Within these sections, a Dashboard layout can be created to construct a screen where there are a lot of DataViewers. The dashboard will scroll within its area. A DataViewer can indicate which of this locations they are usable in by specifying an array containing `main`, `aux`, or `card` in their location field. 
-
-There are also Hidden DataViewers, whose purpose is to load or prepare other data. It should be a viewless component, meaning its render function returns null.
-
-Support DataViewers also exist, and implement the same interface. They are meant to be used by other DataViewers and not directly selected for use. 
-
-To specify a hidden or support DataViewer, set location to be `hidden` or `support`.
-
-# Group Screen
-
-# Group Data Viewers
-
-GroupDataViewers are controlled and organized by the GroupScreen. They will receive the current data, pagination information, filtering information and various keys to help them organize themselves. They can also contribute filters and sort values back to the overall group.
-
-## Installing
-To install a plugin, use the following:
-
-```javascript
-// Plugins.add( 'GroupDataViewer', ... ) can also be used
-molten.addPlugin( 'GroupDataViewer', { 
-  id,
-  type : 'table',
-  icon : 'fa fa-list fa-fw',
-  name : 'Table View',
-  location : 'aux|main|any', // null => main. Array is also allowed
-  handles : ( relationship ) => { return true }
-  component,
-  createSettings,
-  updateSettings,
-  props : { mode : 1 }
-} )
-```
-
-| Prop | Type | Description |
+| Filed | Type | Description |
 |------|------|-------------|
-| id | string | The unique plugin id |
+| id | string | The unique DataViewer plugin id |
 | type | string | The unique type of the DataViewer. |
-| icon | string | The url or font icon class name of the image used to represent the icon. |
 | name | string | The human readable name of the plugin |
-| location | string | Where the DataViewer is usable. `primary` means only the main sections, where they components must fill 100% of width and height. `aux` means only the header sections, where based on the `vertical` prop, the component should take up 100% of width or height, but not both. The other axis should be limited (and relatively small). This is meant for aggregations, rollups, extra command bars, etc. If left null, this will mean `primary`. If a component can be both, `any` can be specified. The value of the `vertical` prop will be undefined when it is used in a `primary` capacity. |
-| handles | function | A function that takes a `relationship` object and returns true if the DataViewer can function with the data.|
-| component | React | A react component |
-| props | object | An options object that will be given to the component |
+| icon | string | The url or font icon class name of the image used to represent the icon. |
+| location | string or array of strings | Specifies where in the layout the DataViewer is usable. See [Locations](#location-strings) |
+| matches | object or function | This is used to determine if the DataViewer should be used in controllers layout. See [below](#match-context).|
+| createSettings | function(props) | Creates and returns the DataViewer's Settings model. | 
+| updateSettings | funciton | Optional function( { settings, props } ) to allow upgrading of the settings model. |
+| component | React.Component | A react component to use to render. Only this or `render` should be supplied. |
+| render | function | A function given props. It should return the create react component. Only this or `component` should be supplied. |
+| getCardTitle | function | Used with `card` location. A `function( model, dashboardContext )` that returns the card's title, if it is visible |
+| getCardIcon | function | Used with `card` location. A `function( model, dashboardContext )` that returns the card's icon, if it is visible |
+| getCardRequired | function | Used with `card` location. This `( model, factory, dashboardContext )` returns the required support models/editors that should be present at the dashboards root.
+| getCardMenuEditor | function | Used with `card` location. A `function( props )` that returns an editor for the card's editor menu. |
+| getCardFooterEditor | function | Used with `card` location. A `function( props )` that returns an editor for the card footer. |
+| getDefaultCardContentOptions | object or function | Used with `card` location. A `function( props, dashboardContext )` that returns an object that can specify the card contents height, minHeight, and maxHeight. or an object such as { height : '300px' }. The props are the same as the dashboardContext.sharedProps object, which will the props given to the DataViewer. | 
+| getDefaultCardOptions | object or function | Used with `card` location. A `function( props, dashboardContext )` that returns an object that can specify the card default card options, such as width (span), height (span), style, titleVisible or or an object such as { width : 2 } The props are the same as the dashboardContext.sharedProps object, which will the props given to the DataViewer |
 
 
 
-## Props
 
-The GroupScreen will supply the following as props to each DataViewers
+
+## Match Context
+Not all DataViewers will work with all root controllers. The DataViewers will use the [match](../../concepts/plugins/refinement.md) mechanism to determine if the root controller supplies the appropriated context that will allow the DataViewer to work. The root controller defines the match context used when determining the possible DataViewers to use and can consist any fields. In Molten, the GroupScreen and ItemInfoScreen are used alot. Their match contexts look like this:
+
+| Match Field | Value | Meaning |
+|-------------|-------|---------|
+| type | 'GroupDataViewer' or 'ItemInfoDataViewer' | This is legacy, and defines a similar concept as the client below. |
+| client | 'GroupScreen' or 'ItemInfoScreen' | This is the type of the root controller. |
+| clientType | string | The specific client type. If the implementation does not supply this, it will be either 'GroupScreen' or 'ItemInfoScreen' |
+| path | string | The relationship path |
+| objectType | string | The type of objects at the relationship path |
+| relationship | Relationship | The relationship object |
+| mobile | boolean | True or false depending on if this is a mobile client or desktop client |
+
+
+## Location Strings
+
+DataViewers can restrict where they can be used via its location field:
+
+| Location String | Meaning |
+|-----------------|---------|
+| main | This DataViewer can be used the two center layout sections. |
+| aux | This DataViewer can be used the on of the four auxilary sections. |
+| card | This DataViewer can be used as a card in the DashboardDataViewer. Its DataViewer can have card specific functions. |
+| any | This is the same as [ 'main', 'aux', 'card' ] |
+| hidden | All hidden data viewers are loaded for the layout, but will not be seen. The purpose of hidden DataViewers is to load or prepare other data. It should be a viewless component, meaning its render function returns null. |
+| support | Not for use by the root controller, but meant as support for other DataViewers. |
+
+## Example
+
+=== "DataViewer"
+    File **MyDataViewer.js**.
+    ```javascript
+      import I18N from '@leverege/i18n'
+      const { tf, tfIcon } = I18N.ns( 'my.MyDataViewer' )
+
+      export default {
+        id : 'my.MyDataViewer',
+        type : 'my.MyDataViewer',
+        name : tf( 'name' ),
+        icon : tfIcon( 'configIcon' ),
+        location : [ 'main' ],
+        matches : { client : 'GroupScreen },
+        createSettings : ( props ) => {
+          return MyDataViewerModel.create()
+        },
+        settingsUpdaters : ( { settings, ...opts } ) => { },
+        component : MyDataView,
+      }
+    ```
+=== "Setup"
+    Be sure to install your plugin in your **PluginSetup.js** file.
+    ``` javascript
+      molten.addPlugin( 'DataViewer', MyDataViewer )
+    ```
+
+
+## GroupScreen and ItemInfoScreen DataViewer Props
+
+When a DataViewer is used in a GroupScreen or ItemInfoScreen, the following props will be supplied the Component or render function.
 
 | Prop | Type | Description |
 |------|------|-------------|
+| ... | | All of the fields in the [match context]( #match-context)|
 | dispatch | object | The redux dispatch |
 | match | object | The connected react router match object |
 | location | object | The connected react router location object |
 | history | object | The connected react router history object |
 | profile | object | The current users profile |
 | objectType | string | The object type, which is the blueprint's alias or id |
+| parentItem | ObjRef | The parent object ref, if available. |
+| iteam | ObjRef | The current object ref. This is only present in the ItemInfoScreen. |
 | data | object | The current data. The data.items maybe sparce if multiple non-sequential pages have been loaded. Use the pagination to access a single page. The values in data are { status, perPage, page, count, items } |
-| relationship | object | The relationship object for current viewed group of data |
-| actons | object | An object used to request creations, delections, etc from the server. The actions should be dispatched. |
-| filter | object | The FilterSourceModel contributed by this data screen |
-| filterName | string | The name of the FilterSourceModel in the FilterSourcesModel. This should be supplied as the 'data' filed in the onFilterChange() event. |
+| delegate | object | An object used to request creations, delections, etc from the server. The actions should be dispatched. |
+| actions | object | Deprecated. The Delegate object |
+| paginator | object | The object used to manage pagination. |
+| filter | object | The FilterSourceModel  |
+| filters | object | The FiltersSourceModel  |
 | onFilterChange | function | Invoke this when the data screen wishes to change its contribution to the filter and sort. The argument should be an event contining { data : filterName, value : newFilterModelObject } |
-| filters | object | The FilterSourcesModel |
 | selectionKey | string | The key used with Selections to manage objects that are selected |
 | rolloverKey | string | The key used with Selections to manage objects that are rolled over |
 | targetKey | string | The key used with Selections to manage objects that are targeted |
+| loading | boolean | True if the data is being loaded |
+| reloadData | function | A function to call to retrigger data loading |
+| dataViewer | DataViewer | The DataViewer |
+| dataViewerId | string | The id of the data viewer |
+| dataViewerModel | object | The DataViewerModel |
+| dataViewers | DataViewer | Object containing the available data viewers and context. { context : {...}, dataViewers : [...] } |
+| settings | object | The DataViewer's settings model: { id, type, settings } |
+| settingsData | any | DataViewers must give this as the data option to the change event fired in onSettingChanged |
+| onSettingsChanged | function | the function to call to modify the settings object.
 | settingsPath | string | The path used with UserSettings to save data. |
-| paginator | object | The object used to manage pagination. |
+| overrides | Obejct | Use overrides.set( dataViewerId, key, value ) to store settings outside of settings model. |
+| overridesModel | Obejct| The current overrides for this data viewer. May be null. Key value pairs set using overrides. |
 | vertical | boolean | If the DataViewer is used in a header/footer capacity, this will indicate the direction the component will be layed out. This is undefined for primary DataViewers. |
-
-## Hidden Group Screen Viewers
-
-Occasionally it is useful to have a group screen viewer installed at a path which does not 
-render any visible UI but which still has the ability to contribute things like filters 
-to the group screen. This can be accomplished by registering a GroupDataViewer with the 
-location of 'hidden'. You can also add a 'matches' property to this plugin which will allow
-you to only render your hidden viewer for certain paths,object types, etc. The name and icon 
-properties of the GroupDataViewer become unnecessary in this context.
-
-**NOTE: As a matter of convention, your hidden component should return null from its function body or render method. However, your component will also be wrapped in a display: none; div and will not be visible**
-
-For example:
-```
-molten.addPlugin( 'GroupDataViewer', {
-  type : 'ghost',
-  location : 'hidden',
-  matches : {
-    objectType : 'cow'
-  },
-  handles : () => true,
-  component : HiddenTest,
-  props : { dude : 'Sweet!' }
-} )
-```
-This plugin will render for all pages with objectType === 'cow' and will be passed its own set of filters, etc 
-which it can use to contribute to the group screen.
-
-see `demo/dataViewer/PluginSetup.js` for a working example
+| isMobile | boolean | repeat of mobile |
+| layout | object | The root layout model. (GroupScreen only)|
