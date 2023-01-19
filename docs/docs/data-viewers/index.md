@@ -105,13 +105,12 @@ When a DataViewer is used in a GroupScreen or ItemInfoScreen, the following prop
 | filterName | string | The key used to store the filter object within the FilterSourcesModel. Used as then `data` property when calling the onFilterChange function. This is only present in the GroupScreen.  |
 | filters | object | The FiltersSourceModel. This is only present in the GroupScreen.  |
 | history | object | The connected react router history object |
-| isMobile | boolean | repeat of mobile |
+| isMobile | boolean | True or false depending on if this is a mobile client or desktop client. repeat of mobile.   |
 | item | ObjRef | The current object ref. This is only present in the ItemInfoScreen. |
 | layout | object | The root layout model. (GroupScreen only)|
 | loading | boolean | True if the data is being loaded |
 | location | object | The connected react router location object |
 | match | object | The connected react router match object |
-| mobile | boolean | Whether or not the device is mobile sized |
 | model | boolean | The `settings` component of the dataViewerModel |
 | objectType | string | The object type, which is the blueprint's alias or id |
 | onFilterChange | function | Invoke this when the data screen wishes to change its contribution to the filter and sort. The argument should be an event contining { data : filterName, value : newFilterModelObject }. This is only present in the GroupScreen. |
@@ -123,13 +122,10 @@ When a DataViewer is used in a GroupScreen or ItemInfoScreen, the following prop
 | path | string | The data path of the current screen (e.g. location.vehicles) |
 | profile | object | The current users profile |
 | reloadData | function | A function to call to retrigger data loading |
-| rollover | object | The Rollover object containing any rolled-over ObjRefs |
 | rolloverKey | string | The key used with Selections to manage objects that are rolled over |
-| selection | object | The Selection object containing any selected ObjRefs |
 | selectionKey | string | The key used with Selections to manage objects that are selected |
 | settings | object | The DataViewer's settings model: { id, type, settings } |
 | settingsData | any | DataViewers must give this as the data option to the change event fired in onSettingChanged |
 | settingsPath | string | The path used with UserSettings to save data. |
 | targetKey | string | The key used with Selections to manage objects that are targeted |
-| targeted | object | The Targeted object containing any targeted ObjRefs |
 | vertical | boolean | If the DataViewer is used in a header/footer capacity, this will indicate the direction the component will be layed out. This is undefined for primary DataViewers. |
