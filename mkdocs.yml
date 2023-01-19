@@ -1,0 +1,158 @@
+site_name: Leverege Build
+copyright: Copyright &copy; Leverege LLC 2022 | All Rights Reserved | IoT Changes Everything&trade;
+theme:
+  logo : https://assets-global.website-files.com/613a44464f3640442ee4b84f/617a7ebce6bc9c507e0d1310_Frame.svg
+  favicon : https://assets-global.website-files.com/613a44464f3640442ee4b84f/617a7ebce6bc9c507e0d1310_Frame.svg
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.top
+    - NOnavigation.sections
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+nav : 
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/index.md
+     #### - Localization: getting-started/i18n.md
+  - Concepts: 
+    - Plugins: 
+      - concepts/plugins/index.md
+      - Refinement: concepts/plugins/refinement.md
+      - Factories: concepts/plugins/factories.md
+      - Views: concepts/plugins/views.md
+      - Config: concepts/plugins/config.md
+      - Layout: concepts/plugins/layout.md
+    - Models:
+      - concepts/models/index.md
+      - Model Util: concepts/models/model-util.md
+      - Editors: concepts/models/editors.md
+    - Attributes:
+      - concepts/attributes/index.md
+      #### - Formatters: concepts/attributes/formatters.md
+      #### - Relationships: concepts/attributes/relationships.md
+      ####  - Data Sources: concepts/attributes/data-sources.md
+      #### - Details: concepts/attributes/details.md
+      #### - Table Columns: concepts/attributes/table.md
+    #### - Actions: concepts/actions.md
+  - Documentation: 
+    - Startup: 
+      - docs/startup/index.md
+      - Initializers: docs/startup/initializers.md
+      - Support Components: docs/startup/support-components.md
+      #### - Redux: docs/startup/redux.md
+    - Adding a Screen:
+      - docs/routes/index.md
+      - Screens : docs/routes/screens.md
+      - Routes : docs/routes/routes.md
+      - Links : docs/routes/links.md
+    - Consuming Custom Data:
+      - docs/custom-data/index.md
+      - Creating Custom Actions : docs/custom-data/actions.md
+      - Creating a DataSource : docs/custom-data/data-source.md
+      - Making Custom Attributes : docs/custom-data/attributes.md
+      - Creating a Route : docs/custom-data/routes.md
+      - Adding CRUD Actions : docs/custom-data/molten-actions.md
+      - Customizing Search : docs/custom-data/search.md
+    - Data Sources:
+      - docs/data-sources/index.md
+    - Data Viewers:
+      - docs/data-viewers/index.md
+    - Filtering and Sorting:
+      - docs/filtering/index.md
+      - Filtering:
+        - docs/filtering/filter/index.md
+        - Imagine Filtering: docs/filtering/filter/imagine.md
+        - Attribute Conditions: docs/filtering/filter/attribute-conditions.md
+        - Custom Filters: docs/filtering/filter/custom-comparators.md
+        - Custom Suggestors: docs/filtering/filter/custom-suggestors.md
+        - Custom Data: docs/filtering/filter/custom-data.md
+      - Sorting:
+        - docs/filtering/sort/index.md
+    - Graphs :
+      - docs/graphs/index.md
+      - Getting Started : docs/graphs/getting-started.md
+      - XYChart:
+        - docs/graphs/xychart/index.md
+        - Plugin Points:
+          - Colorizers: docs/graphs/plugin-points/colorizers.md
+          - Glyphs:
+            - docs/graphs/plugin-points/glyphs/index.md
+            - Glyph Renderers: docs/graphs/plugin-points/glyphs/glyph-renderers.md
+            - Glyph Symbolizers: docs/graphs/plugin-points/glyphs/glyph-symbolizers.md
+          - Graph Background: docs/graphs/plugin-points/graph-background.md
+          - Scale: docs/graphs/plugin-points/scale.md
+          - Series Renderers: docs/graphs/plugin-points/series-renderers.md
+          - XYChartModelConfigurer: docs/graphs/plugin-points/model-configurer.md
+        - Themeing: docs/graphs/themeing.md
+    - Table:
+      - docs/table/index.md
+      - Columns: docs/table/columns.md
+      - Plugin Points:
+        - docs/table/plugin-points/index.md
+        - AttributeCellRenderer: docs/table/plugin-points/attribute-cell-renderer.md
+        - ColumnRenderer: docs/table/plugin-points/column-renderer.md
+        - TableModelConfigurer: docs/table/plugin-points/model-configurer.md
+  #### - Plugins:
+    - plugins/index.md
+  - Configuration:
+    - config/index.md
+  #### - API:
+   #### - api/index.md
+extra:
+  version: 
+    provider: mike
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/feed/update/urn:li:activity:6589859965832347648/
+      name: Leverege on LinkedIn
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/leverege/
+      name: Leverege on Facebook
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/leverege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+      name: Leverege on Twitter
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist
+  - pymdownx.tilde

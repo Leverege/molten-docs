@@ -1,0 +1,6 @@
+title2 : Cool Stuff
+arrange2: 
+  - index.md
+  - i18n.md
+  - ...
+collapse: true
