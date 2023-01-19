@@ -92,36 +92,44 @@ When a DataViewer is used in a GroupScreen or ItemInfoScreen, the following prop
 | Prop | Type | Description |
 |------|------|-------------|
 | ... | | All of the fields in the [match context]( #match-context)|
-| dispatch | object | The redux dispatch |
-| match | object | The connected react router match object |
-| location | object | The connected react router location object |
-| history | object | The connected react router history object |
-| profile | object | The current users profile |
-| objectType | string | The object type, which is the blueprint's alias or id |
-| parentItem | ObjRef | The parent object ref, if available. |
-| iteam | ObjRef | The current object ref. This is only present in the ItemInfoScreen. |
-| data | object | The current data. The data.items maybe sparce if multiple non-sequential pages have been loaded. Use the pagination to access a single page. The values in data are { status, perPage, page, count, items } |
-| delegate | object | An object used to request creations, delections, etc from the server. The actions should be dispatched. |
 | actions | object | Deprecated. The Delegate object |
-| paginator | object | The object used to manage pagination. |
-| filter | object | The FilterSourceModel  |
-| filters | object | The FiltersSourceModel  |
-| onFilterChange | function | Invoke this when the data screen wishes to change its contribution to the filter and sort. The argument should be an event contining { data : filterName, value : newFilterModelObject } |
-| selectionKey | string | The key used with Selections to manage objects that are selected |
-| rolloverKey | string | The key used with Selections to manage objects that are rolled over |
-| targetKey | string | The key used with Selections to manage objects that are targeted |
-| loading | boolean | True if the data is being loaded |
-| reloadData | function | A function to call to retrigger data loading |
+| data | object | The current data. The data.items maybe sparce if multiple non-sequential pages have been loaded. Use the pagination to access a single page. The values in data are { status, perPage, page, count, items } |
 | dataViewer | DataViewer | The DataViewer |
-| dataViewerId | string | The id of the data viewer |
+| dataViewerId | string | The id of the data from the LayoutModel |
+| dataViewerInstanceId | string | An id tied to the current incarnation of the data viewer component. Useful as a key in dashboard style layouts. Using dataViewerId in a situation like this can lead to duplicate ids when a data viewer's model is copied |
 | dataViewerModel | object | The DataViewerModel |
 | dataViewers | DataViewer | Object containing the available data viewers and context. { context : {...}, dataViewers : [...] } |
+| delegate | object | An object used to request creations, delections, etc from the server. The actions should be dispatched. |
+| dispatch | object | The redux dispatch |
+| filter | object | The FilterSourceModel. This is only present in the GroupScreen.  |
+| filterName | string | The key used to store the filter object within the FilterSourcesModel. Used as then `data` property when calling the onFilterChange function. This is only present in the GroupScreen.  |
+| filters | object | The FiltersSourceModel. This is only present in the GroupScreen.  |
+| history | object | The connected react router history object |
+| isMobile | boolean | repeat of mobile |
+| item | ObjRef | The current object ref. This is only present in the ItemInfoScreen. |
+| layout | object | The root layout model. (GroupScreen only)|
+| loading | boolean | True if the data is being loaded |
+| location | object | The connected react router location object |
+| match | object | The connected react router match object |
+| mobile | boolean | Whether or not the device is mobile sized |
+| model | boolean | The `settings` component of the dataViewerModel |
+| objectType | string | The object type, which is the blueprint's alias or id |
+| onFilterChange | function | Invoke this when the data screen wishes to change its contribution to the filter and sort. The argument should be an event contining { data : filterName, value : newFilterModelObject }. This is only present in the GroupScreen. |
+| onSettingsChange | function | the function to call to modify the settings object.
+| overrideModel | Obejct| The current overrides for this data viewer. May be null. Key value pairs set using overrides. |
+| overrides | Obejct | Use overrides.set( dataViewerId, key, value ) to store settings outside of settings model. |
+| paginator | object | The object used to manage pagination. |
+| parentItem | ObjRef | The parent object ref, if available. |
+| path | string | The data path of the current screen (e.g. location.vehicles) |
+| profile | object | The current users profile |
+| reloadData | function | A function to call to retrigger data loading |
+| rollover | object | The Rollover object containing any rolled-over ObjRefs |
+| rolloverKey | string | The key used with Selections to manage objects that are rolled over |
+| selection | object | The Selection object containing any selected ObjRefs |
+| selectionKey | string | The key used with Selections to manage objects that are selected |
 | settings | object | The DataViewer's settings model: { id, type, settings } |
 | settingsData | any | DataViewers must give this as the data option to the change event fired in onSettingChanged |
-| onSettingsChanged | function | the function to call to modify the settings object.
 | settingsPath | string | The path used with UserSettings to save data. |
-| overrides | Obejct | Use overrides.set( dataViewerId, key, value ) to store settings outside of settings model. |
-| overridesModel | Obejct| The current overrides for this data viewer. May be null. Key value pairs set using overrides. |
+| targetKey | string | The key used with Selections to manage objects that are targeted |
+| targeted | object | The Targeted object containing any targeted ObjRefs |
 | vertical | boolean | If the DataViewer is used in a header/footer capacity, this will indicate the direction the component will be layed out. This is undefined for primary DataViewers. |
-| isMobile | boolean | repeat of mobile |
-| layout | object | The root layout model. (GroupScreen only)|
