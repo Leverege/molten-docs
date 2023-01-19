@@ -1,2 +1,0 @@
-# Glyphs
-Glyphs are symbols that you can use in your graphs. Like most graph components, a Glyph can be any valid svg, including shapes, images or text. UI Attribute Graphs has a number of [built in Glyph types](glyph-renderers#dot), and you can extend these types by implementing a [Glyph Symbolizer](glyph-symbolizers) or [Glyph Renderer](glyph-renderers).
