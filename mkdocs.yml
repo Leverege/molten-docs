@@ -96,6 +96,8 @@ nav :
         - AttributeCellRenderer: docs/table/plugin-points/attribute-cell-renderer.md
         - ColumnRenderer: docs/table/plugin-points/column-renderer.md
         - TableModelConfigurer: docs/table/plugin-points/model-configurer.md
+    - Editors:
+      - docs/editors/index.md
   #### - Plugins:
     - plugins/index.md
   - Configuration:
