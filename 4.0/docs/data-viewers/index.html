@@ -1,0 +1,2496 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../data-sources/">
+      
+      
+        <link rel="next" href="../filtering/">
+      
+      <link rel="icon" href="https://assets-global.website-files.com/613a44464f3640442ee4b84f/617a7ebce6bc9c507e0d1310_Frame.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Data Viewers - Leverege Build</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-viewers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Leverege Build" class="md-header__button md-logo" aria-label="Leverege Build" data-md-component="logo">
+      
+  <img src="https://assets-global.website-files.com/613a44464f3640442ee4b84f/617a7ebce6bc9c507e0d1310_Frame.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Leverege Build
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Viewers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../concepts/plugins/" class="md-tabs__link">
+        Concepts
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../startup/" class="md-tabs__link md-tabs__link--active">
+        Documentation
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../config/" class="md-tabs__link">
+        Configuration
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Leverege Build" class="md-nav__button md-logo" aria-label="Leverege Build" data-md-component="logo">
+      
+  <img src="https://assets-global.website-files.com/613a44464f3640442ee4b84f/617a7ebce6bc9c507e0d1310_Frame.svg" alt="logo">
+
+    </a>
+    Leverege Build
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../getting-started/">Getting Started</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../concepts/plugins/">Plugins</a>
+          
+            <label for="__nav_3_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Plugins" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plugins/refinement/" class="md-nav__link">
+        Refinement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plugins/factories/" class="md-nav__link">
+        Factories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plugins/views/" class="md-nav__link">
+        Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plugins/config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/plugins/layout/" class="md-nav__link">
+        Layout
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../concepts/models/">Models</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Models" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Models
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/models/model-util/" class="md-nav__link">
+        Model Util
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/models/editors/" class="md-nav__link">
+        Editors
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../concepts/attributes/">Attributes</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Attributes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Attributes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../plugins/">Documentation</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../startup/">Startup</a>
+          
+            <label for="__nav_4_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Startup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Startup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../startup/initializers/" class="md-nav__link">
+        Initializers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../startup/support-components/" class="md-nav__link">
+        Support Components
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../routes/">Adding a Screen</a>
+          
+            <label for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Adding a Screen" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adding a Screen
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routes/screens/" class="md-nav__link">
+        Screens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routes/routes/" class="md-nav__link">
+        Routes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routes/links/" class="md-nav__link">
+        Links
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../custom-data/">Consuming Custom Data</a>
+          
+            <label for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Consuming Custom Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Consuming Custom Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/actions/" class="md-nav__link">
+        Creating Custom Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/data-source/" class="md-nav__link">
+        Creating a DataSource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/attributes/" class="md-nav__link">
+        Making Custom Attributes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/routes/" class="md-nav__link">
+        Creating a Route
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/molten-actions/" class="md-nav__link">
+        Adding CRUD Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-data/search/" class="md-nav__link">
+        Customizing Search
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../data-sources/">Data Sources</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Data Sources" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Data Sources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Data Viewers</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Data Viewers" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Data Viewers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../filtering/">Filtering and Sorting</a>
+          
+            <label for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Filtering and Sorting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Filtering and Sorting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_6_2" type="checkbox" id="__nav_4_6_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../filtering/filter/">Filtering</a>
+          
+            <label for="__nav_4_6_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Filtering" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Filtering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtering/filter/imagine/" class="md-nav__link">
+        Imagine Filtering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtering/filter/attribute-conditions/" class="md-nav__link">
+        Attribute Conditions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtering/filter/custom-comparators/" class="md-nav__link">
+        Custom Filters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtering/filter/custom-suggestors/" class="md-nav__link">
+        Custom Suggestors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filtering/filter/custom-data/" class="md-nav__link">
+        Custom Data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_6_3" type="checkbox" id="__nav_4_6_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../filtering/sort/">Sorting</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Sorting" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sorting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../graphs/">Graphs</a>
+          
+            <label for="__nav_4_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Graphs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Graphs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_3" type="checkbox" id="__nav_4_7_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../graphs/xychart/">XYChart</a>
+          
+            <label for="__nav_4_7_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="XYChart" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          XYChart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_3_2" type="checkbox" id="__nav_4_7_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7_3_2" tabindex="0" aria-expanded="false">
+          Plugin Points
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plugin Points" data-md-level="4">
+        <label class="md-nav__title" for="__nav_4_7_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Plugin Points
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/colorizers/" class="md-nav__link">
+        Colorizers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_7_3_2_2" type="checkbox" id="__nav_4_7_3_2_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../graphs/plugin-points/glyphs/">Glyphs</a>
+          
+            <label for="__nav_4_7_3_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Glyphs" data-md-level="5">
+        <label class="md-nav__title" for="__nav_4_7_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Glyphs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/glyphs/glyph-renderers/" class="md-nav__link">
+        Glyph Renderers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/glyphs/glyph-symbolizers/" class="md-nav__link">
+        Glyph Symbolizers
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/graph-background/" class="md-nav__link">
+        Graph Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/scale/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/series-renderers/" class="md-nav__link">
+        Series Renderers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/plugin-points/model-configurer/" class="md-nav__link">
+        XYChartModelConfigurer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/themeing/" class="md-nav__link">
+        Themeing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../table/">Table</a>
+          
+            <label for="__nav_4_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Table" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Table
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table/columns/" class="md-nav__link">
+        Columns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_8_3" type="checkbox" id="__nav_4_8_3" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../table/plugin-points/">Plugin Points</a>
+          
+            <label for="__nav_4_8_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Plugin Points" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Plugin Points
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table/plugin-points/attribute-cell-renderer/" class="md-nav__link">
+        AttributeCellRenderer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table/plugin-points/column-renderer/" class="md-nav__link">
+        ColumnRenderer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table/plugin-points/model-configurer/" class="md-nav__link">
+        TableModelConfigurer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../editors/">Editors</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Editors" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Editors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../config/">Configuration</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#match-context" class="md-nav__link">
+    Match Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#location-strings" class="md-nav__link">
+    Location Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groupscreen-and-iteminfoscreen-dataviewer-props" class="md-nav__link">
+    GroupScreen and ItemInfoScreen DataViewer Props
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="data-viewers">Data Viewers<a class="headerlink" href="#data-viewers" title="Permanent link">&para;</a></h1>
+<p>Data Viewers are widgets that are used to display viewers and editors about a certain data set. The root controller will load the base data and supply it to the data viewers as props. The root controller will manage the layout and its models, which allows data viewers to be added and removed in particular locations. The root Layout consists of two main sections and four surrounding auxilary sections ( top, bottom, left, right ). These sections are fixed to the screen current screen size, meaning that they do now scroll off the screen: the top is fixed to the top of the area, the bottom to the bottom, left and right to the sides, and the remaining section is divided amongst the two main sections. Any one of these sections can be null, and its space is given to the other data viewers. A special DashboardDataViewer that support Cards allows these sections to be further divided and scrolled.</p>
+<p>DataViewers are made available for use via the Plugins mechanism under the key <code>DataViewer</code>. DataViewer plugins will act handle to the various parts of the DataViewer: the name/usage, the DataViewer's settings model, and the React component used to display the data to the user. The DataViewer's interface looks like this:</p>
+<table>
+<thead>
+<tr>
+<th>Filed</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>The unique DataViewer plugin id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>The unique type of the DataViewer.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>The human readable name of the plugin</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>string</td>
+<td>The url or font icon class name of the image used to represent the icon.</td>
+</tr>
+<tr>
+<td>location</td>
+<td>string or array of strings</td>
+<td>Specifies where in the layout the DataViewer is usable. See <a href="#location-strings">Locations</a></td>
+</tr>
+<tr>
+<td>matches</td>
+<td>object or function</td>
+<td>This is used to determine if the DataViewer should be used in controllers layout. See <a href="#match-context">below</a>.</td>
+</tr>
+<tr>
+<td>createSettings</td>
+<td>function(props)</td>
+<td>Creates and returns the DataViewer's Settings model.</td>
+</tr>
+<tr>
+<td>updateSettings</td>
+<td>funciton</td>
+<td>Optional function( { settings, props } ) to allow upgrading of the settings model.</td>
+</tr>
+<tr>
+<td>component</td>
+<td>React.Component</td>
+<td>A react component to use to render. Only this or <code>render</code> should be supplied.</td>
+</tr>
+<tr>
+<td>render</td>
+<td>function</td>
+<td>A function given props. It should return the create react component. Only this or <code>component</code> should be supplied.</td>
+</tr>
+<tr>
+<td>getCardTitle</td>
+<td>function</td>
+<td>Used with <code>card</code> location. A <code>function( model, dashboardContext )</code> that returns the card's title, if it is visible</td>
+</tr>
+<tr>
+<td>getCardIcon</td>
+<td>function</td>
+<td>Used with <code>card</code> location. A <code>function( model, dashboardContext )</code> that returns the card's icon, if it is visible</td>
+</tr>
+<tr>
+<td>getCardRequired</td>
+<td>function</td>
+<td>Used with <code>card</code> location. This <code>( model, factory, dashboardContext )</code> returns the required support models/editors that should be present at the dashboards root.</td>
+</tr>
+<tr>
+<td>getCardMenuEditor</td>
+<td>function</td>
+<td>Used with <code>card</code> location. A <code>function( props )</code> that returns an editor for the card's editor menu.</td>
+</tr>
+<tr>
+<td>getCardFooterEditor</td>
+<td>function</td>
+<td>Used with <code>card</code> location. A <code>function( props )</code> that returns an editor for the card footer.</td>
+</tr>
+<tr>
+<td>getDefaultCardContentOptions</td>
+<td>object or function</td>
+<td>Used with <code>card</code> location. A <code>function( props, dashboardContext )</code> that returns an object that can specify the card contents height, minHeight, and maxHeight. or an object such as { height : '300px' }. The props are the same as the dashboardContext.sharedProps object, which will the props given to the DataViewer.</td>
+</tr>
+<tr>
+<td>getDefaultCardOptions</td>
+<td>object or function</td>
+<td>Used with <code>card</code> location. A <code>function( props, dashboardContext )</code> that returns an object that can specify the card default card options, such as width (span), height (span), style, titleVisible or or an object such as { width : 2 } The props are the same as the dashboardContext.sharedProps object, which will the props given to the DataViewer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="match-context">Match Context<a class="headerlink" href="#match-context" title="Permanent link">&para;</a></h2>
+<p>Not all DataViewers will work with all root controllers. The DataViewers will use the <a href="../../concepts/plugins/refinement/">match</a> mechanism to determine if the root controller supplies the appropriated context that will allow the DataViewer to work. The root controller defines the match context used when determining the possible DataViewers to use and can consist any fields. In Molten, the GroupScreen and ItemInfoScreen are used alot. Their match contexts look like this:</p>
+<table>
+<thead>
+<tr>
+<th>Match Field</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>'GroupDataViewer' or 'ItemInfoDataViewer'</td>
+<td>This is legacy, and defines a similar concept as the client below.</td>
+</tr>
+<tr>
+<td>client</td>
+<td>'GroupScreen' or 'ItemInfoScreen'</td>
+<td>This is the type of the root controller.</td>
+</tr>
+<tr>
+<td>clientType</td>
+<td>string</td>
+<td>The specific client type. If the implementation does not supply this, it will be either 'GroupScreen' or 'ItemInfoScreen'</td>
+</tr>
+<tr>
+<td>path</td>
+<td>string</td>
+<td>The relationship path</td>
+</tr>
+<tr>
+<td>objectType</td>
+<td>string</td>
+<td>The type of objects at the relationship path</td>
+</tr>
+<tr>
+<td>relationship</td>
+<td>Relationship</td>
+<td>The relationship object</td>
+</tr>
+<tr>
+<td>mobile</td>
+<td>boolean</td>
+<td>True or false depending on if this is a mobile client or desktop client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="location-strings">Location Strings<a class="headerlink" href="#location-strings" title="Permanent link">&para;</a></h2>
+<p>DataViewers can restrict where they can be used via its location field:</p>
+<table>
+<thead>
+<tr>
+<th>Location String</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>main</td>
+<td>This DataViewer can be used the two center layout sections.</td>
+</tr>
+<tr>
+<td>aux</td>
+<td>This DataViewer can be used the on of the four auxilary sections.</td>
+</tr>
+<tr>
+<td>card</td>
+<td>This DataViewer can be used as a card in the DashboardDataViewer. Its DataViewer can have card specific functions.</td>
+</tr>
+<tr>
+<td>any</td>
+<td>This is the same as [ 'main', 'aux', 'card' ]</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>All hidden data viewers are loaded for the layout, but will not be seen. The purpose of hidden DataViewers is to load or prepare other data. It should be a viewless component, meaning its render function returns null.</td>
+</tr>
+<tr>
+<td>support</td>
+<td>Not for use by the root controller, but meant as support for other DataViewers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">DataViewer</label><label for="__tabbed_1_2">Setup</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>File <strong>MyDataViewer.js</strong>.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="nx">I18N</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@leverege/i18n&#39;</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">tf</span><span class="p">,</span><span class="w"> </span><span class="nx">tfIcon</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">I18N</span><span class="p">.</span><span class="nx">ns</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;my.MyDataViewer&#39;</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">  </span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;my.MyDataViewer&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;my.MyDataViewer&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">tf</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="nx">icon</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">tfIcon</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;configIcon&#39;</span><span class="w"> </span><span class="p">),</span>
+<span class="w">    </span><span class="nx">location</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w"> </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">matches</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">GroupScreen</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">createSettings</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">props</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">MyDataViewerModel</span><span class="p">.</span><span class="nx">create</span><span class="p">()</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">settingsUpdaters</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">settings</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">opts</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">component</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">MyDataView</span><span class="p">,</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Be sure to install your plugin in your <strong>PluginSetup.js</strong> file.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nx">molten</span><span class="p">.</span><span class="nx">addPlugin</span><span class="p">(</span><span class="w"> </span><span class="s1">&#39;DataViewer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">MyDataViewer</span><span class="w"> </span><span class="p">)</span>
+</code></pre></div></p>
+</div>
+</div>
+</div>
+<h2 id="groupscreen-and-iteminfoscreen-dataviewer-props">GroupScreen and ItemInfoScreen DataViewer Props<a class="headerlink" href="#groupscreen-and-iteminfoscreen-dataviewer-props" title="Permanent link">&para;</a></h2>
+<p>When a DataViewer is used in a GroupScreen or ItemInfoScreen, the following props will be supplied the Component or render function.</p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>...</td>
+<td></td>
+<td>All of the fields in the <a href="#match-context">match context</a></td>
+</tr>
+<tr>
+<td>actions</td>
+<td>object</td>
+<td>Deprecated. The Delegate object</td>
+</tr>
+<tr>
+<td>data</td>
+<td>object</td>
+<td count_="count," items="items" page_="page," perPage_="perPage," status_="status,">The current data. The data.items maybe sparce if multiple non-sequential pages have been loaded. Use the pagination to access a single page. The values in data are</td>
+</tr>
+<tr>
+<td>dataViewer</td>
+<td>DataViewer</td>
+<td>The DataViewer</td>
+</tr>
+<tr>
+<td>dataViewerId</td>
+<td>string</td>
+<td>The id of the data from the LayoutModel</td>
+</tr>
+<tr>
+<td>dataViewerInstanceId</td>
+<td>string</td>
+<td>An id tied to the current incarnation of the data viewer component. Useful as a key in dashboard style layouts. Using dataViewerId in a situation like this can lead to duplicate ids when a data viewer's model is copied</td>
+</tr>
+<tr>
+<td>dataViewerModel</td>
+<td>object</td>
+<td>The DataViewerModel</td>
+</tr>
+<tr>
+<td>dataViewers</td>
+<td>DataViewer</td>
+<td>Object containing the available data viewers and context. { context : {...}, dataViewers : [...] }</td>
+</tr>
+<tr>
+<td>delegate</td>
+<td>object</td>
+<td>An object used to request creations, delections, etc from the server. The actions should be dispatched.</td>
+</tr>
+<tr>
+<td>dispatch</td>
+<td>object</td>
+<td>The redux dispatch</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>object</td>
+<td>The FilterSourceModel. This is only present in the GroupScreen.</td>
+</tr>
+<tr>
+<td>filterName</td>
+<td>string</td>
+<td>The key used to store the filter object within the FilterSourcesModel. Used as then <code>data</code> property when calling the onFilterChange function. This is only present in the GroupScreen.</td>
+</tr>
+<tr>
+<td>filters</td>
+<td>object</td>
+<td>The FiltersSourceModel. This is only present in the GroupScreen.</td>
+</tr>
+<tr>
+<td>history</td>
+<td>object</td>
+<td>The connected react router history object</td>
+</tr>
+<tr>
+<td>isMobile</td>
+<td>boolean</td>
+<td>True or false depending on if this is a mobile client or desktop client. repeat of mobile.</td>
+</tr>
+<tr>
+<td>item</td>
+<td>ObjRef</td>
+<td>The current object ref. This is only present in the ItemInfoScreen.</td>
+</tr>
+<tr>
+<td>layout</td>
+<td>object</td>
+<td>The root layout model. (GroupScreen only)</td>
+</tr>
+<tr>
+<td>loading</td>
+<td>boolean</td>
+<td>True if the data is being loaded</td>
+</tr>
+<tr>
+<td>location</td>
+<td>object</td>
+<td>The connected react router location object</td>
+</tr>
+<tr>
+<td>match</td>
+<td>object</td>
+<td>The connected react router match object</td>
+</tr>
+<tr>
+<td>model</td>
+<td>boolean</td>
+<td>The <code>settings</code> component of the dataViewerModel</td>
+</tr>
+<tr>
+<td>objectType</td>
+<td>string</td>
+<td>The object type, which is the blueprint's alias or id</td>
+</tr>
+<tr>
+<td>onFilterChange</td>
+<td>function</td>
+<td>Invoke this when the data screen wishes to change its contribution to the filter and sort. The argument should be an event contining { data : filterName, value : newFilterModelObject }. This is only present in the GroupScreen.</td>
+</tr>
+<tr>
+<td>onSettingsChange</td>
+<td>function</td>
+<td>the function to call to modify the settings object.</td>
+</tr>
+<tr>
+<td>overrideModel</td>
+<td>Obejct</td>
+<td>The current overrides for this data viewer. May be null. Key value pairs set using overrides.</td>
+</tr>
+<tr>
+<td>overrides</td>
+<td>Obejct</td>
+<td>Use overrides.set( dataViewerId, key, value ) to store settings outside of settings model.</td>
+</tr>
+<tr>
+<td>paginator</td>
+<td>object</td>
+<td>The object used to manage pagination.</td>
+</tr>
+<tr>
+<td>parentItem</td>
+<td>ObjRef</td>
+<td>The parent object ref, if available.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>string</td>
+<td>The data path of the current screen (e.g. location.vehicles)</td>
+</tr>
+<tr>
+<td>profile</td>
+<td>object</td>
+<td>The current users profile</td>
+</tr>
+<tr>
+<td>reloadData</td>
+<td>function</td>
+<td>A function to call to retrigger data loading</td>
+</tr>
+<tr>
+<td>rolloverKey</td>
+<td>string</td>
+<td>The key used with Selections to manage objects that are rolled over</td>
+</tr>
+<tr>
+<td>selectionKey</td>
+<td>string</td>
+<td>The key used with Selections to manage objects that are selected</td>
+</tr>
+<tr>
+<td>settings</td>
+<td>object</td>
+<td id_="id," settings="settings" type_="type,">The DataViewer's settings model:</td>
+</tr>
+<tr>
+<td>settingsData</td>
+<td>any</td>
+<td>DataViewers must give this as the data option to the change event fired in onSettingChanged</td>
+</tr>
+<tr>
+<td>settingsPath</td>
+<td>string</td>
+<td>The path used with UserSettings to save data.</td>
+</tr>
+<tr>
+<td>targetKey</td>
+<td>string</td>
+<td>The key used with Selections to manage objects that are targeted</td>
+</tr>
+<tr>
+<td>vertical</td>
+<td>boolean</td>
+<td>If the DataViewer is used in a header/footer capacity, this will indicate the direction the component will be layed out. This is undefined for primary DataViewers.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Leverege LLC 2022 | All Rights Reserved | IoT Changes Everything&trade;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:6589859965832347648/" target="_blank" rel="noopener" title="Leverege on LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.facebook.com/leverege/" target="_blank" rel="noopener" title="Leverege on Facebook" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://twitter.com/leverege?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener" title="Leverege on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "NOnavigation.sections", "navigation.indexes", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
